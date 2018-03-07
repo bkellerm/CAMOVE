@@ -4,7 +4,7 @@ The walking.js framework detects if you are walking or not and hand.js helps you
 what hand is touching the screen and in which segment (top, middle, bottom) the touches occure.
 
 # Support
-Currently, both CAMOVE frameworks are only tested on a chrome 64 browser on a OnePlus 5t.
+Currently, both CAMOVE frameworks are only tested on a Google Chrome for Android v64 browser on a OnePlus 5t.
 
 # Installation
 The framework is dependant on jQuery, therefore first include jQuery 
