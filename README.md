@@ -1,7 +1,7 @@
 # CAMOVE
 CAMOVE are two Javascript frameworks that help you to recognize user context and act on it.
-The walking.js framework detects if you are walking or not and hand.js helps you detect 
-what hand is touching the screen and in which segment (top, middle, bottom) the touches occure.
+The walking.js framework detects if you are walking or not (static) and hand.js detect 
+what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure.
 
 # Support
 Currently, both CAMOVE frameworks are only tested on a Google Chrome for Android v64 browser on a OnePlus 5t.
@@ -57,29 +57,39 @@ var w = new Walking();
 
 # Options
 
-## hand.js options
+## Table explaining parameters for hand.js
 
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
 | -------------  | :------------ | :-------------: | :---------------- |
-| __defaultHand__      | the hand the system gets initialized with | hand-right | hand-{right, left} |
-| __swipesNeeded__ | number of touches needed to determin hand level | 1 | whole number greater 0 |
-| __distTol__ | minimal length of swipe in pixels to count as swipe | 30 | whole number greater 1 |
+| __DEFAULT_HAND__      | the hand the system gets initialized with | hand-right | hand-{right, left} |
+| __NUM_SWIPES_NEEDED__ | number of touches needed to determin section hand is in | 2 | whole number greater 0 |
+| __MIN_SWIPE_DIST__ | minimal length of swipe path length in pixels to count as swipe | 30 | whole number greater 1 |
 | __onLeft__ | function that gets invoked when hand touching the screen changes to left hand | undefined | function |
 | __onRight__ | function that gets invoked when hand touching the screen changes to right hand | undefined | function |
-| __tol__ | REMOVE? | 0 | [0,1] |
-| __lrTol__ | percentage of clockwise triplets needed relative to total number of triplets | 0.6 | [0,1] |
-| __defaultHandLevel__ | initial hand level | hand-bottom | hand-{bottom, middle, top} |
-| __top_part__ | percentage of height of screen starting from top that counts as top | 0.3 | [0,1] |
-| __middle_part__ | percentage of height of screen starting from end of top part that counts as middle | 0 | [0,1] |
-| __bottom_part__ | percentage of height of screen starting from end of middle part that counts as bottom | 0.7 | [0,1] |
-| __touchesNeededLevel__ | number of consecutive touches on same level needed to change to that level | 5 | whole number greater 0 |
-| __onTop__ | function that gets invoked when hand touching the screen changes level to top | undefined | function | 
-| __onMiddle__ | function that gets invoked when hand touching the screen changes level to middle | undefined | function | 
-| __onBottom__ | function that gets invoked when hand touching the screen changes level to bottom | undefined | function | 
-| __css__ | flag for using context to enable css classes  | true | false, true |
+| __CW_CC_TOL__ | tolerance relative to touch path length needed to be CW or CC (otherwise neutral) | 0 | [0,1] |
+| __CW_CC_RATIO__ | percentage of one clock direction triplets (CW or CC) need realtive to total number of triplets to register as corresponding hand | 0.6 | [0,1] |
+| __DEFAULT_HAND_SECTION__ | initial section hand is in | hand-bottom | hand-{bottom, middle, top} |
+| __TOP_SECTION_RATIO__ | ratio of height of screen that counts as top | 0.3 | [0,1] |
+| __MIDDLE_SECTION_RATIO__ | ratio of height of screen that counts as middle | 0 | [0,1] |
+| __BOTTOM_SECTION_RATIO__ | ratio of height of screen that counts as bottom | 0.7 | [0,1] |
+| __NUM_TOUCHES_NEEDED__ | number of consecutive touches on in same section needed to change to to this section | 5 | whole number greater 0 |
+| __onTop__ | function that gets invoked when hand touching the screen changes section to top | undefined | function | 
+| __onMiddle__ | function that gets invoked when hand touching the screen changes section to middle | undefined | function | 
+| __onBottom__ | function that gets invoked when hand touching the screen changes section to bottom | undefined | function | 
+| __CSS__ | flag for using context to enable css classes  | true | false, true |
 
 
-## walking.js options
+## Table explaining parameters for walking.js
 
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
-| __||||
+| __STEP_SENSITIVITY__ | y-acceleration (axis towards ground) threshold for up/down movement of step in [m/s^2] | 0.8 | [0,Inf] |
+| __SPEED_S_W__ | min. average speed [steps/s] during last WINDOW_S_W [ms] needed to change from static to walking state |||
+| __WINDOW_S_W__ | time window in ms considered for chaning from static into walking state |||
+| __SPEED_W_S__ | min. average speed [steps/s] during last WINDOW_W_S [ms] needed to change from walking to static state |||
+| __WINDOW_W_S__ | time window in ms considered for chaning from walking into static state |||
+| __MAX_STD_OVER_AVG_S_W__ ||||
+| __MIN_DELAY_START_NEXT_STEP__ | min. delay for next step to start after finishing a step |||
+| __onWalking__ | function that gets invoked when changing from static into walking state |||
+| __onStatic__ | function that gets invoked when changing from walking into static state |||
+| __onStep__ | function that gets invoked when one step is performed |||
+
