@@ -32,22 +32,21 @@ h.set({
 ```
 
 ## for walking.js
+Works analogous to hand.js. Here an example:
 ```javascript
-var w = new Walking();
-
-w.set({
+var w = new Walking({
     WINDOW_S_W: 30000,
     WINDOW_W_S: 15000
 });
 ```
 
 ## use context in CSS
-You can change your layout based on CSS rules by enabling the CSS flag. This adds the current context as a class to all HTML tags. Here an example:
+You can change your layout based on CSS rules by enabling the CSS flag. This adds the current context (e.g. for walking.js walking or static) as a class to all HTML tags. You can now make use of this by adding for example it as an additional condition to the selector. Here an example:
 ```javascript
 var w = new Walking();
 ```
 ```HTML
-<p id="hide">I get hidden when you stop walking</p>
+<p id="hide">I get hidden when you stop walking and displayed again when you start walking.</p>
 ```
 ```CSS
 #hide.static {display:none}
@@ -56,7 +55,7 @@ var w = new Walking();
 
 
 # Options
-
+For both hand.js and walking.js are various parameters accessible which help you to costumize your site's behavior.
 ## Table explaining parameters for hand.js
 
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
@@ -87,7 +86,7 @@ var w = new Walking();
 | __WINDOW_S_W__ | time window in ms considered for chaning from static into walking state |||
 | __SPEED_W_S__ | min. average speed [steps/s] during last WINDOW_W_S [ms] needed to change from walking to static state |||
 | __WINDOW_W_S__ | time window in ms considered for chaning from walking into static state |||
-| __MAX_STD_OVER_AVG_S_W__ ||||
+[//]: <> | __MAX_STD_OVER_AVG_S_W__ ||||
 | __MIN_DELAY_START_NEXT_STEP__ | min. delay for next step to start after finishing a step |||
 | __onWalking__ | function that gets invoked when changing from static into walking state |||
 | __onStatic__ | function that gets invoked when changing from walking into static state |||
