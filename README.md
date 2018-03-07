@@ -1,14 +1,14 @@
 # CAMOVE
-CAMOVE are two JavaScript frameworks that help you to recognize user context and act on it.
+CAMOVE are two Javascript frameworks that help you to recognize user context and act on it.
 The walking.js framework detects if you are walking or not and hand.js helps you detect 
 what hand is touching the screen and in which segment (top, middle, bottom) the touches occure.
 
 # Support
-Currently, both CAMOVE frameworks are only tested on a chrome 63 browser on a OnePlus 5t.
+Currently, both CAMOVE frameworks are only tested on a chrome 64 browser on a OnePlus 5t.
 
 # Installation
 The framework is dependant on jQuery, therefore first include jQuery 
-and than one or both of the CAMOVE frameworks.
+and than one and/or both of the CAMOVE frameworks.
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="path/to/hand.js" type="text/javascript"></script>
@@ -16,13 +16,14 @@ and than one or both of the CAMOVE frameworks.
 ```
 
 # Example Usage
-## hand.js
+## for hand.js
 ```javascript
 var h = new Hand({
     defaultHand: "hand-left",
     swipesNeeded: 5
 });
 
+// you can also set options after the object has been created with set
 h.set({
     onLeft: function() {
         alert("welcome back to the left side");
@@ -30,15 +31,29 @@ h.set({
 });
 ```
 
-## walking.js
+## for walking.js
 ```javascript
 var w = new Walking();
 
 w.set({
-    TIME_TILL_WALKING: 30000,
-    TIME_TILL_STATIC: 15000
+    WINDOW_S_W: 30000,
+    WINDOW_W_S: 15000
 });
 ```
+
+## use context in CSS
+You can change your layout based on CSS rules by enabling the CSS flag. This adds the current context as a class to all HTML tags. Here an example:
+```javascript
+var w = new Walking();
+```
+```HTML
+<p id="hide">I get hidden when you stop walking</p>
+```
+```CSS
+#hide.static {display:none}
+#hide.walking {display:inline}
+```
+
 
 # Options
 
@@ -67,3 +82,4 @@ w.set({
 ## walking.js options
 
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
+| __||||
