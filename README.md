@@ -1,17 +1,17 @@
 # CAMOVE
-CAMOVE are two Javascript frameworks that help you to recognize user context and act on it.
-The walking.js framework detects if you are walking or not (static) and hand.js detect 
-what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure. This context can be used two diffrent ways. You can provide a functions that get executed when you switch into the according state or you can enable the CSS flag and change your site by using the corresponding CSS classes.
+CAMOVE are two Javascript frameworks that help you to recognize the context of the user.
+The walking.js framework detects if you are walking or not (static) and hand.js detects 
+what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure. This context can be used in two diffrent ways. You can provide a functions that get executed when you switch into the according state or you can enable the CSS flag and change your site by using the corresponding CSS classes. CAMOVE was implemented for a bachelor thesis and it is still a work in progress. If you want to make any interesting change, please feel free to do so!
 
 # Motivation
-The idea is to make websites that adapt to user preferences and actions. For example adapt the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts walking.
+The idea is to make websites that adapt to user preferences and actions. For example, it adapts the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts walking.
 
 # Support
 Currently, both CAMOVE frameworks are only tested on Google Chrome for Android v64 on a OnePlus 5t.
 
 # Installation
 The framework is dependant on jQuery, therefore first include jQuery 
-and than one and/or both of the CAMOVE frameworks.
+and then one and/or both of the CAMOVE frameworks.
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="path/to/hand.js" type="text/javascript"></script>
