@@ -1,7 +1,6 @@
 # CAMOVE
 CAMOVE are two Javascript frameworks that help you to recognize user context and act on it.
-The walking.js framework detects if you are walking or not (static) and hand.js detect 
-what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure. This context can be used two diffrent ways. You can provide a functions that get executed when you switch into the according state or you can enable the CSS flag and change your site by using the corresponding CSS classes.
+The walking.js framework detects if you are walking or not (static) and hand.js detect what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure. This context can be used two diffrent ways. You can provide a functions that get executed when you switch into the according state or you can enable the CSS flag and change your site by using the corresponding CSS classes.
 
 # Motivation
 The idea is to make websites that adapt to user preferences and actions. For example adapt the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts walking.
