@@ -96,4 +96,4 @@ For both hand.js and walking.js are various parameters accessible which help you
 | __CSS__ | flag for using context to enable css classes  | false | boolean |
 
 ## Demo
-- [https://bkellerm.github.io/bkellerm/docs/demo/poems/][poems]
+- [poems](https://bkellerm.github.io/bkellerm/docs/demo/poems/)
