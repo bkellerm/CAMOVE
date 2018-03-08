@@ -81,6 +81,7 @@ For both hand.js and walking.js are various parameters accessible which help you
 ## Table explaining parameters for walking.js
 
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
+| -------------  | :------------ | :-------------: | :---------------- |
 | __STEP_SENSITIVITY__ | y-acceleration (axis towards ground) threshold [m/s^2] for up/down movement of step in | 0.8 | [0,Inf] |
 | __SPEED_S_W__ | min. average speed [steps/s] during last WINDOW_S_W needed to change from static to walking state |||
 | __WINDOW_S_W__ | time window [ms] considered for chaning from static into walking state | 10000 | [0,Inf] |
