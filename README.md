@@ -19,7 +19,7 @@ and than one and/or both of the CAMOVE frameworks.
 ```
 
 # Example Usage
-## for hand.js
+## hand.js
 ```javascript
 var h = new Hand({
     defaultHand: "hand-left",
@@ -34,7 +34,7 @@ h.set({
 });
 ```
 
-## for walking.js
+## walking.js
 Works analogous to hand.js. Here an example:
 ```javascript
 var w = new Walking();
