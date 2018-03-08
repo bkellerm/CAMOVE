@@ -4,7 +4,7 @@ The walking.js framework detects if you are walking or not (static) and hand.js 
 what hand is touching the screen (left or right) and in which segment (top, middle, bottom) the touches occure. This context can be used two diffrent ways. You can provide a functions that get executed when you switch into the according state or you can enable the CSS flag and change your site by using the corresponding CSS classes.
 
 # Motivation
-The idea is to make websites adapt to user preferences and actions. For example adapt the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts moving.
+The idea is to make websites that adapt to user preferences and actions. For example adapt the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts walking.
 
 # Support
 Currently, both CAMOVE frameworks are only tested on Google Chrome for Android v64 on a OnePlus 5t.
@@ -37,10 +37,8 @@ h.set({
 ## for walking.js
 Works analogous to hand.js. Here an example:
 ```javascript
-var w = new Walking({
-    WINDOW_S_W: 30000,
-    WINDOW_W_S: 15000
-});
+var w = new Walking();
+w.set({CSS: true});
 ```
 
 ## Enable CSS Flag
