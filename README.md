@@ -42,7 +42,7 @@ w.set({CSS: true});
 ```
 
 ## Enable CSS Flag
-You can change your layout based on CSS rules by enabling the CSS flag. This adds the current context (e.g. for walking.js walking or static) as a class to all HTML tags. You can now make use of this by adding for example it as an additional condition to the selector. Here an example:
+You can change your layout based on CSS rules by enabling the CSS flag. This adds the current context (e.g. walking or static) as a class to all DOM elements. You can now make use of this by including it into your CSS selector. Here an example:
 ```javascript
 var w = new Walking();
 ```
@@ -54,9 +54,8 @@ var w = new Walking();
 #hide.walking {display:inline}
 ```
 
-
 # Options
-For both hand.js and walking.js are various parameters accessible which help you to costumize your site's behavior.
+For both hand.js and walking.js are various parameters accessible which help you to costumize your site's behavior. You can set them at creation or afterwards with set.
 
 ## Table explaining parameters for hand.js
 
@@ -96,4 +95,4 @@ For both hand.js and walking.js are various parameters accessible which help you
 | __CSS__ | flag for using context to enable css classes  | false | boolean |
 
 ## Demo
-- [poems](https://bkellerm.github.io/bkellerm/docs/demo/poems/)
+Poems is a small example that changes the position of the menu according to you grip and shows you a message when you walk for 10s. [Try it](https://bkellerm.github.io/bkellerm/docs/demo/poems/)
