@@ -7,7 +7,7 @@ what hand is touching the screen (left or right) and in which segment (top, midd
 The idea is to make websites that adapt to user preferences and actions. For example, it adapts the UI accordingly to there holding pattern or change the amount of information displayed at once when the user starts walking.
 
 # Support
-Currently, both CAMOVE frameworks are only tested on Google Chrome for Android v64 on a OnePlus 5t.
+Currently, both CAMOVE frameworks were only tested on a OnePlus 5t. Hand.js works in Chrome 64/65 as well as in Edge 1.0 but not in Firefox 58. Walking.js works in Chrome 64, Firefox 58 and Edge 1.0 but no longer in Chrome 65.
 
 # Installation
 The framework is dependant on jQuery, therefore first include jQuery 
