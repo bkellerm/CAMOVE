@@ -14,8 +14,8 @@ The framework is dependant on jQuery, therefore first include jQuery
 and then one and/or both of the CAMOVE frameworks.
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="path/to/hand.js" type="text/javascript"></script>
-<script src="path/to/walking.js" type="text/javascript"></script>
+<script src="path/to/hand.js"></script>
+<script src="path/to/walking.js"></script>
 ```
 
 # Example Usage
