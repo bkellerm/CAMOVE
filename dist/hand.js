@@ -136,9 +136,9 @@ var Hand = function () {
 
       //DEBUG
       // $('.circle').remove();
-      // var circle = "<div class='circle remove' style='left:"+(_touchTrace[0].clientX-10)+"px;top:"+(_touchTrace[0].clientY-10)+"px;border-color:black;'></div>";
+      // var circle1 = "<div class='circle remove' style='left:"+(_touchTrace[0].clientX-10)+"px;top:"+(_touchTrace[0].clientY-10)+"px;border-color:black;'></div>";
       // $(document).ready(()=>{
-      //   $('body').append(circle);
+      //   $('body').append(circle1);
       // });
       //END DEBUG
 
@@ -151,7 +151,7 @@ var Hand = function () {
           if (f(tPan[i - 2], tPan[i - 1], tPan[i]) > defaults.CW_CC_TOL * dist(tPan[i - 2], tPan[i - 1])) {
             cc += 1;
             //DEBUG
-            // var circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:yellow;'></div>";
+            // let circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:yellow;'></div>";
             // $(document).ready(()=>{
             //   $('body').append(circle);
             // });
@@ -159,7 +159,7 @@ var Hand = function () {
           } else if (f(tPan[i - 2], tPan[i - 1], tPan[i]) < -defaults.CW_CC_TOL * dist(tPan[i - 2], tPan[i - 1])) {
             cw += 1;
             //DEBUG
-            // var circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:red;'></div>";
+            // let circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:red;'></div>";
             // $(document).ready(()=>{
             //   $('body').append(circle);
             // });
@@ -167,7 +167,7 @@ var Hand = function () {
           } else {
             neutral += 1;
             //DEBUG
-            // var circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:orange;'></div>";
+            // let circle = "<div class='circle remove' style='left:"+(_touchTrace[i-1].clientX-10)+"px;top:"+(_touchTrace[i-1].clientY-10)+"px;border-color:orange;'></div>";
             // $(document).ready(()=>{
             //   $('body').append(circle);
             // });
