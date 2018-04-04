@@ -120,7 +120,7 @@ var Hand = function () {
       var tPan = _touchTrace.map(function(k){ return { x: -k.clientY, y: -k.clientX }; });
 
       //describes clock direction of path a,b,c (positive clockwise, negative counterclockwise, 0 straight)
-      var f = function(a, b, c){ return c.y - (a.y + (b.y - a.y) / (b.x - a.x) * (c.x - a.x)); };
+      var f = function(a, b, c){ return a.y!=b.y ? c.y - (a.y + (b.y - a.y) / (b.x - a.x) * (c.x - a.x)) : 0; };
 
       //calc distance between point a and point b
       var dist = function(a, b){ return Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2)); }; //euclidean distance
