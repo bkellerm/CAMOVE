@@ -62,8 +62,8 @@ For both hand.js and walking.js are various parameters accessible which help you
 | __Option Name__  | __Description__ | __Default Value__ | __Possible Values__ |
 | -------------  | :------------ | :-------------: | :---------------- |
 | __DEFAULT_HAND__      | the hand the system gets initialized with | hand-right | hand-{right, left} |
-| __NUM_SWIPES_NEEDED__ | number of touches needed to determin section hand is in | 2 | whole number >0 |
-| __MIN_SWIPE_DIST__ | minimal length of swipe path length in pixels to count as swipe | 30 | whole number >0 |
+| __NUM_SWIPES_NEEDED__ | number of touches needed to determine the section the hand is in | 2 | whole number >0 |
+| __MIN_SWIPE_DIST__ | minimal length of swipe in pixels to count as swipe | 30 | whole number >0 |
 | __CW_CC_RATIO__ | percentage of one clock direction triplets (CW or CC) need realtive to total number of triplets to register as corresponding hand | 0.6 | [0,1] |
 | __CW_CC_TOL__ | tolerance relative to touch path length needed to be CW or CC (otherwise neutral) | 0 | [0,1] |
 | __onLeft__ | function that gets invoked when hand touching the screen changes to left hand | undefined | function |
